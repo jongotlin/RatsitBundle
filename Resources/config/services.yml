@@ -1,0 +1,8 @@
+services:
+    jgi.ratsit:
+        class: JGI\Ratsit\Ratsit
+        public: true
+        arguments:
+            - "%jgi.ratsit.token%"
+
+
