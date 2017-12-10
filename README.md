@@ -1,5 +1,5 @@
 # RatsitBundle
-Symfony Bundle for jongotlin/ratsit
+Symfony Bundle for [jongotlin/ratsit](https://github.com/jongotlin/Ratsit)
 
 ## Installation
 Install with composer and your favourite http adapter (in this case Guzzle 6)
@@ -7,7 +7,7 @@ Install with composer and your favourite http adapter (in this case Guzzle 6)
 $ composer require php-http/client-implementation:^1.0 php-http/discovery:^1.0 php-http/guzzle6-adapter:^1.0 php-http/httplug:^1.0 php-http/message:^1.0 jongotlin/ratsit-bundle:^1.0
 ```
 
-In services.yaml
+In services.yml
 ```yaml
 services:
     httplug.client:
@@ -19,7 +19,7 @@ services:
         class: GuzzleHttp\Client
 ```
 
-In config.taml
+In config.yml
 ```yaml
 ratsit:
     token: '*************'
