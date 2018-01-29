@@ -24,5 +24,6 @@ class RatsitExtension extends Extension
             $container->setParameter('jgi.ratsit.' . $key, $value);
         }
         $container->getDefinition('jgi.ratsit')->addMethodCall('setHttpClient', [new Reference($config['http_client'])]);
+        $container->getDefinition('jgi.ratsit')->addMethodCall('setEventDispatcher', [new Reference('event_dispatcher')]);
     }
 }
