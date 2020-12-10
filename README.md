@@ -7,18 +7,6 @@ Install with composer and your favourite http adapter (in this case Guzzle 6)
 $ composer require php-http/client-implementation:^1.0 php-http/discovery:^1.0 php-http/guzzle6-adapter:^1.0 php-http/httplug:^1.0 php-http/message:^1.0 jongotlin/ratsit-bundle:^1.0
 ```
 
-In services.yml
-```yaml
-services:
-    httplug.client:
-        class: Http\Adapter\Guzzle6\Client
-        arguments:
-            - '@client'
-
-    client:
-        class: GuzzleHttp\Client
-```
-
 In config.yml
 ```yaml
 ratsit:
@@ -37,8 +25,7 @@ $bundles = array(
 ## Usage
 
 ```php
-/** @var \JGI\Ratsit\Ratsit $ratsit */
-$ratsit = $this->get('jgi.ratsit');
+// Inject JGI\Ratsit\Ratsit $ratsit via container */
 $persons = $ratsit->searchPerson('Per Fredrik', 'EKEBY');
 $person = $ratsit->findPersonBySocialSecurityNumber('194107081111');
 ```

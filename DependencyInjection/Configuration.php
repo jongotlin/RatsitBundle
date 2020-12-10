@@ -12,8 +12,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $root = $treeBuilder->root('ratsit');
+        $treeBuilder = new TreeBuilder('ratsit');
+        $root = $treeBuilder->getRootNode();
         $root->children()
             ->scalarNode('http_client')->isRequired()->end()
             ->scalarNode('token')->isRequired()->end()
