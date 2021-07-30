@@ -15,7 +15,7 @@
   },
   "require": {
     "php": "^7.1",
-    "symfony/framework-bundle": "^4.0|5.0",
+    "symfony/framework-bundle": "^4.0|^5.0",
     "jongotlin/ratsit": "^2.4"
   },
   "require-dev": {
